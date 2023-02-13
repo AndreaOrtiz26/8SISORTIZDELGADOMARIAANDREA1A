@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/tarea6.css" type="text/css">
+    <script>
+      function operarNumeros() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var resultado;
+        
+        if (num1 === num2) {
+          resultado = num1 * num2;
+        } else if (num1 > num2) {
+          resultado = num1 - num2;
+        } else {
+          resultado = num1 + num2;
+        }
+        
+        document.getElementById("resultado").innerHTML = "El resultado es: " + resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="num1"><br><br>
+    <input type="text" id="num2"><br><br>
+    <button onclick="operarNumeros()">Operar</button><br><br>
+    <div id="resultado"></div>
+  </body>
+</html>

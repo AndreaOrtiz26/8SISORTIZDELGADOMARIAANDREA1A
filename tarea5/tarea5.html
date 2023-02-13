@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora de Edad</title>
+    <link rel="stylesheet" href="CSS/tarea5.css" type="text/css">
+  </head>
+  <body>
+    <h1>Calculadora de Edad</h1>
+    <p>Introduce tu fecha de nacimiento (dd/mm/aaaa): <input type="text" id="fecha_nacimiento"></p>
+    <button onclick="calculaEdad()">Calcular</button>
+    <p id="edad"></p>
+
+    <script>
+      function calculaEdad() {
+        let fechaNacimiento = new Date(document.getElementById("fecha_nacimiento").value);
+        let fechaActual = new Date();
+        let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        let mes = fechaActual.getMonth() - fechaNacimiento.getMonth();
+        if (mes < 0 || (mes === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+          edad--;
+        }
+        document.getElementById("edad").innerHTML = "Tu edad es: " + edad + " años.";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Porcentaje de hombres y mujeres</title>
+    <link rel="stylesheet" href="CSS/tarea4.css" type="text/css">
+  </head>
+  <body>
+    <h1>Porcentaje de hombres y mujeres</h1>
+    <p>Introduce el número de hombres: <input type="text" id="num_hombres"></p>
+    <p>Introduce el número de mujeres: <input type="text" id="num_mujeres"></p>
+    <button onclick="calculaPorcentajes()">Calcular</button>
+    <p id="porcentajes"></p>
+
+    <script>
+      function calculaPorcentajes() {
+        let numHombres = parseFloat(document.getElementById("num_hombres").value);
+        let numMujeres = parseFloat(document.getElementById("num_mujeres").value);
+        let totalEstudiantes = numHombres + numMujeres;
+        let porcentajeHombres = (numHombres / totalEstudiantes) * 100;
+        let porcentajeMujeres = (numMujeres / totalEstudiantes) * 100;
+        document.getElementById("porcentajes").innerHTML = "Porcentaje de hombres: " + porcentajeHombres + "%" + "<br>" + "Porcentaje de mujeres: " + porcentajeMujeres + "%";
+      }
+    </script>
+  </body>
+</html>
