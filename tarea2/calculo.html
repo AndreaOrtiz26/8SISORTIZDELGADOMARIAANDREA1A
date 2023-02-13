@@ -18,14 +18,8 @@
       <label for="pagoFinal">Pago Final:</label>
       <input type="text" id="pagoFinal" name="pagoFinal" disabled>
     </form>
-    <script>
-      function calcularPago() {
-        var totalCompra = parseFloat(document.querySelector("#totalCompra").value);
-        var descuento = parseFloat(document.querySelector("#descuento").value);
-        var pagoFinal = totalCompra - (totalCompra * descuento / 100);
-        document.querySelector("#pagoFinal").value = pagoFinal.toFixed(2);
-      }
-    </script>
+    <script src="JS/tarea2.js"></script>
+   
   </body>
 </html>
 
